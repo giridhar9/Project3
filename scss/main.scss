@@ -1,0 +1,170 @@
+@import "reset";
+@import "fonts";
+@import "mixin";
+@import "variables";
+
+body {
+	font-size: 12px;
+	color: #2e2e2e;
+	font-family: 'opensans';
+	font-weight: lighter;
+}
+img {
+	max-width: 100%;
+}
+.tag-search input {
+	width: 15%;
+}
+#gif {
+	width: 10%;
+}
+#lmore {
+	width: 100%;
+	text-align: center;
+}
+#more {
+	background-color: red;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+}
+#ajax {
+	width: 100%;
+	text-align: center;
+}
+#logo img {
+	width: 40%;
+}
+#logo {
+	text-align: center;
+	}
+.pattern {
+	background-image: url('../assets/images/pattern.png');
+	text-align: center;
+}
+#icon img {
+	width: 20%;
+	height: auto;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+.tag-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.item2 {
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.rounded {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+.tag-search {
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	padding-bottom: 50px;
+}
+body {
+
+	@include bp(tablet) {
+	   img {
+	   	max-width: 100%;
+	   }
+	   .pattern {
+	   	width: 100%;
+	   }
+	   .grid {
+	   	margin: 0 auto;
+	   	border: 3px solid #c2c2c2;
+	   }
+	   #logo {
+	   	    text-align: left;
+	   }
+		.tag-list {
+			flex-wrap: wrap;
+			height: 200vh;
+			width: 100vw;
+			
+		}
+		.tag-list li {
+			display: flex;
+			width: 30%;
+			flex-direction: row;
+			margin: 5px auto;
+			border: 1px solid #c2c2c2;
+		}
+		.container {
+			display: flex;
+			width: 100%;
+
+		}
+		.container li {
+			display: flex;
+			flex-direction: row;
+		}
+		.item1 {
+			width: 40%;
+			text-align: left;
+		}
+		.item2 {
+			width: 70%;
+			font-size: .7rem;
+			text-align: right;
+		}
+		.item2 li {
+             border: none;
+		}
+		.ico {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+    @include bp(desktop) {
+    	  
+    	  .tag-list {
+    		display: flex;
+            height: 200vh;
+            width: 200vh;
+            flex-wrap: wrap;
+         
+    	}
+    	.tag-list li {
+    		width: 22%;
+    		display: flex;
+    		flex-direction: row;
+    	}
+       .container {
+			display: flex;
+			width: 100%;
+
+		}
+		.container li {
+			display: flex;
+			flex-direction: row;
+		}
+		.item1 {
+			width: 40%;
+			text-align: left;
+		}
+		.item2 {
+			width: 70%;
+			font-size: .9rem;
+			text-align: right;
+		}
+		.ico {
+			display: flex;
+			flex-direction: row;
+		}
+    }
+
+}

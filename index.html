@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>instagrid</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div id="logo">
+  <img src="assets/images/instagrid-logo.svg" alt="logo" />
+</div>
+<div class="pattern">
+<div id="icon">
+	<img src="assets/images/instagrid-icon.svg" alt="icon" />
+</div>
+	<div class="tag-search">
+	<input type="text" name="tag_name" id="tag-name" placeholder="Enter your tag name" />
+      <button id="tag-name-item"><span id="tag-icon-search"></span><i class="fa fa-search"></i></button>
+</div>
+</div>
+<div class="grid">
+<div>
+	<img id="search" src="assets/images/search-tags.svg" alt="tags">
+	<div id="ajax"><img id="gif" src="assets/images/ajax-loader.gif" alt="loading"></div>
+</div>
+
+<ul class="tag-list"></ul>
+<div id="lmore">
+<button id="more">LOAD MORE</button></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
+

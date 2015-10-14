@@ -1,39 +1,18 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var gulp        = require('gulp');
+'use strict';
+var gulp = require('gulp'); 
 var browserSync = require('browser-sync').create();
-var connect = require('gulp-connect');
-
-gulp.task('compress-js', function() {
- gulp.src('js/*.js')
-    .pipe(concat('main.min.js'))
- 	.pipe(uglify())
- 	.pipe(gulp.dest('build/js'))
+var sass = require('gulp-sass');
+gulp.task('scss', function () {
+  gulp.src('./scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
 });
-
-gulp.task('compress-css', function(){
-	gulp.src('css/*.css')
-	.pipe(concat('main.min.css'))
- 	.pipe(gulp.dest('build/css'))
-});
-gulp.task('watch', function(){
-	gulp.watch('js/*.js', ['compress-js']);
-	gulp.watch('css/*.css', ['compress-css']);
-});
-gulp.task('browser-sync', ['compress-css', 'compress-js'], function() {
+gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
-gulp.watch('css/*.css', ['compress-css']);
-gulp.watch('css/*.css').on('change', browserSync.reload);
-
-gulp.watch('js/*.js', ['compress-js']);
-gulp.watch('js/*.js').on('change', browserSync.reload);
-});
-
-gulp.task('connect', function(){
-	connect.server();
+    gulp.watch('./scss/**/*.scss', ['scss']);
+    gulp.watch(["index.html", "js/*.js", "css/*.css"]).on('change', browserSync.reload);
 });
