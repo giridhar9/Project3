@@ -5,32 +5,39 @@
 	<title>instagrid</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fancybox-master/source/jquery.fancybox.css" type="text/css" media="screen" />
 
 </head>
 <body>
-	<div id="logo">
+<div id="logo">
   <img src="assets/images/instagrid-logo.svg" alt="logo" />
 </div>
 <div class="pattern">
 <div id="icon">
 	<img src="assets/images/instagrid-icon.svg" alt="icon" />
 </div>
-	<div class="tag-search">
-	<input type="text" name="tag_name" id="tag-name" placeholder="Enter your tag name" />
-      <button id="tag-name-item"><span id="tag-icon-search"></span><i class="fa fa-search"></i></button>
-</div>
-</div>
+ <div class="tag-search">
+  <input type="text" name="tag_name" id="tag-name" placeholder="Enter your search.." />
+     <button id="tag-name-item">
+     	<span id="tag-icon-search"></span>
+     	<i class="fa fa-search"></i>
+     </button>
+  </div>
+ </div>
 <div class="grid">
 <div>
 	<img id="search" src="assets/images/search-tags.svg" alt="tags">
-	<div id="ajax"><img id="gif" src="assets/images/ajax-loader.gif" alt="loading"></div>
-</div>
+	<div id="ajax"><img id="gif" src="assets/images/ajax-loader.gif" alt="loadin"></div>
 
-<ul class="tag-list"></ul>
+<ul class="tag-list">
+     </ul>
 <div id="lmore">
-<button id="more">LOAD MORE</button></div>
+<button id="more">LOAD MORE</button>
+</div>
+</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="fancybox-master/source/jquery.fancybox.pack.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

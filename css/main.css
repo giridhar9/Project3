@@ -364,44 +364,40 @@ ul {
   margin-right: 0; }
 
 @font-face {
-  font-family: 'open_sanslight_italic';
-  src: url("opensans-lightitalic-webfont.eot");
-  src: url("opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-lightitalic-webfont.woff2") format("woff2"), url("opensans-lightitalic-webfont.woff") format("woff"), url("opensans-lightitalic-webfont.ttf") format("truetype"), url("opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
+  font-family: 'opensans';
+  src: url("../assets/fonts/opensans-lightitalic-webfont.eot");
+  src: url("../assets/fonts/opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/opensans-lightitalic-webfont.woff2") format("woff2"), url("../assets/fonts/opensans-lightitalic-webfont.woff") format("woff"), url("../assets/fonts/opensans-lightitalic-webfont.ttf") format("truetype"), url("../assets/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
   font-weight: lighter;
   font-style: italic; }
 
 @font-face {
-  font-family: 'open_sanslight';
-  src: url("opensans-light-webfont.eot");
-  src: url("opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-light-webfont.woff2") format("woff2"), url("opensans-light-webfont.woff") format("woff"), url("opensans-light-webfont.ttf") format("truetype"), url("opensans-light-webfont.svg#open_sanslight") format("svg");
+  font-family: 'opensans';
+  src: url("../assets/fonts/opensans-light-webfont.eot");
+  src: url("../assets/fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/opensans-light-webfont.woff2") format("woff2"), url("../assets/fonts/opensans-light-webfont.woff") format("woff"), url("../assets/fonts/opensans-light-webfont.ttf") format("truetype"), url("../assets/fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
   font-weight: lighter;
   font-style: normal; }
 
 @font-face {
-  font-family: 'open_sansbold_italic';
-  src: url("opensans-bolditalic-webfont.eot");
-  src: url("opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-bolditalic-webfont.woff2") format("woff2"), url("opensans-bolditalic-webfont.woff") format("woff"), url("opensans-bolditalic-webfont.ttf") format("truetype"), url("opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg");
+  font-family: 'opensans';
+  src: url("../assets/fonts/opensans-bolditalic-webfont.eot");
+  src: url("../assets/fonts/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/opensans-bolditalic-webfont.woff2") format("woff2"), url("../assets/fonts/opensans-bolditalic-webfont.woff") format("woff"), url("../assets/fonts/opensans-bolditalic-webfont.ttf") format("truetype"), url("../assets/fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
-  font-family: 'open_sansbold';
-  src: url("opensans-bold-webfont.eot");
-  src: url("opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-bold-webfont.woff2") format("woff2"), url("opensans-bold-webfont.woff") format("woff"), url("opensans-bold-webfont.ttf") format("truetype"), url("opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-family: 'opensans';
+  src: url("../assets/fonts/opensans-bold-webfont.eot");
+  src: url("../assets/fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/opensans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/opensans-bold-webfont.woff") format("woff"), url("../assets/fonts/opensans-bold-webfont.ttf") format("truetype"), url("../assets/fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 body {
-  font-size: 12px;
   color: #2e2e2e;
   font-family: 'opensans';
   font-weight: lighter; }
 
 img {
   max-width: 100%; }
-
-.tag-search input {
-  width: 15%; }
 
 #gif {
   width: 10%; }
@@ -438,18 +434,58 @@ img {
 
 .tag-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column; }
 
-.item2 {
+.tag-list li {
   display: flex;
-  flex-direction: column;
-  font-weight: bold; }
+  width: 90%;
+  margin: 5px auto;
+  border: 1px solid #c2c2c2; }
 
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+  width: 100%;
+  height: 30%;
+  margin: 0 auto;
+  overflow: auto; }
+
+.item1 {
+  text-align: left;
+  width: 30%;
+  margin: 0 5px; }
+
+.item2 {
+  font-size: .9rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px; }
+
+.item2 li {
+  border: none;
+  font-family: 'opensans';
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0; }
+
+.ico {
+  display: flex;
+  flex-direction: row; }
+
+#pic {
+  width: 100%;
+  height: 70%; }
+
+#pic img {
+  width: 100%;
+  height: 70%; }
 
 .rounded {
   border-radius: 50%;
@@ -462,6 +498,25 @@ img {
   justify-content: center;
   padding-bottom: 50px; }
 
+.tag-list .try-again {
+  border: none;
+  font-family: 'opensans';
+  font-weight: bold;
+  font-size: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 25px; }
+
+.not-found {
+  font-family: 'opensans';
+  font-weight: bold;
+  font-size: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 25px; }
+
 @media (min-width: 600px) {
   body img {
     max-width: 100%; }
@@ -470,60 +525,109 @@ img {
   body .grid {
     margin: 0 auto;
     border: 3px solid #c2c2c2; }
+  body .try-again {
+    margin: 0; }
   body #logo {
     text-align: left; }
   body .tag-list {
+    display: flex;
     flex-wrap: wrap;
-    height: 200vh;
+    flex-direction: row;
     width: 100vw; }
   body .tag-list li {
     display: flex;
     width: 30%;
     flex-direction: row;
-    margin: 5px auto;
-    border: 1px solid #c2c2c2; }
+    margin: 5px auto; }
   body .container {
     display: flex;
-    width: 100%; }
-  body .container li {
-    display: flex;
-    flex-direction: row; }
+    width: 100%;
+    height: 30%;
+    margin: 0 auto;
+    overflow: auto; }
   body .item1 {
-    width: 40%;
-    text-align: left; }
+    text-align: left;
+    width: 30%;
+    margin: 0 5px; }
   body .item2 {
+    font-size: .9rem;
     width: 70%;
-    font-size: .7rem;
-    text-align: right; }
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px; }
   body .item2 li {
-    border: none; }
+    font-family: 'opensans';
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0; }
   body .ico {
     display: flex;
-    flex-direction: row; } }
+    flex-direction: row; }
+  body #pic {
+    width: 100%;
+    height: 70%; }
+  body #pic img {
+    width: 100%;
+    height: 70%; } }
 
 @media (min-width: 1000px) {
+  body .grid {
+    margin: 0 auto;
+    border: 3px solid #c2c2c2; }
+  body #logo {
+    margin: 10px; }
+  body .try-again {
+    margin: 0; }
   body .tag-list {
     display: flex;
-    height: 200vh;
-    width: 200vh;
-    flex-wrap: wrap; }
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
+    overflow: auto; }
   body .tag-list li {
     width: 22%;
     display: flex;
     flex-direction: row; }
+  body .tag-list li img {
+    width: 100%;
+    height: 100%; }
   body .container {
     display: flex;
-    width: 100%; }
-  body .container li {
-    display: flex;
-    flex-direction: row; }
+    width: 100%;
+    height: 30%;
+    margin: 0 auto;
+    overflow: auto; }
   body .item1 {
-    width: 40%;
-    text-align: left; }
+    text-align: left;
+    width: 30%;
+    margin: 0 5px; }
   body .item2 {
-    width: 70%;
     font-size: .9rem;
-    text-align: right; }
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  body .item2 li {
+    font-family: 'opensans';
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0; }
   body .ico {
     display: flex;
-    flex-direction: row; } }
+    flex-direction: row; }
+  body #pic {
+    width: 100%;
+    height: 70%; }
+  body #pic img {
+    width: 100%;
+    height: 60%; } }
