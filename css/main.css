@@ -417,7 +417,8 @@ img {
   text-align: center; }
 
 #logo img {
-  width: 40%; }
+  width: 40%;
+  padding: 7px; }
 
 #logo {
   text-align: center; }
